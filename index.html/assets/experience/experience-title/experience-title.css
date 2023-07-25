@@ -7,6 +7,12 @@
     line-height: 26px;
 }
 
+
+.experience__img{
+    align-items: center;
+    width: 10px;
+}
+
 @media(min-width:320px) and (max-width: 1024px){
     .experience__title{
        font-size: 16px;
