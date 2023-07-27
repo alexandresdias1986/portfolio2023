@@ -45,6 +45,12 @@
     
     
     <link rel="stylesheet" href="./assets/contato/formcontato.css/formcontato.css">
+    <link rel="stylesheet" href="./assets/contato/formcontato-esquerda/formcontato--esquerda.css">
+    <link rel="stylesheet" href="./assets/contato/formcontato--contato/formcontato--contato.css">
+    <link rel="stylesheet" href="./assets/contato/formcontato__botao.css/formcontato--botao.css">
+    <link rel="stylesheet" href="./assets/contato/formcontato--form/formcontato--form.css">
+    <link rel="stylesheet" href="./assets/contato/formcontact--text/formcontact--text.css">
+
 
     <link rel="stylesheet" href="./assets/experience/experience-title/experience-title.css">
     <link rel="stylesheet" href="./assets/experience/experience-buttons/experience-buttons.css">
@@ -65,7 +71,7 @@
 <body>
     <!-- Sessão de Menu  -->
     <div class="all">
-    <section class="menu">
+    <!--<section class="menu">-->
         <header>
             <img src="./imagens/icones/vector.png">
             <h3 class="menu__title">Alexandre dos Santos Dias</h3>
@@ -81,7 +87,7 @@
             </ul>
             <li class="menu__list__item__contato"><a href="#contato">alexandres.dias@yahoo.com.br</a></li>
         </nav>
-    </section>
+    <!--</section>-->
 
 </header>
 
@@ -301,25 +307,35 @@
         </div>  
 
         <!-- Sessão de Contato -->
-        <section class="formcontato">
-            <div id="contato" class="formcontato__contacto">
-                <div class="formcontato--esquerda">
-                    <img class="formcontato__img" src="./imagens/contato/contact_image.png">
-                </div>
-                <div class="formcontato__text">
-                    <h2 class="formcontato__title">Contato</h2>
-                    <h3 class="formcontato__subtext">Quer entrar em contato comigo?</h3>
-                    <h3 class="formcontato__subtext">Preencha o formulário ao lado e entrarei em contato o mais rápido possível. </h3>
-                    <form class="formcontato__form">
-                        <input class="formcontato__input" type="text" id="nome" placeholder="Nome">
-                        <input class="formcontato__input" type="email" id="email" placeholder="Email">
-                        <input class="formcontato__input" type="text" id="assunto" placeholder="Assunto">
-                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensagem" placeholder="Sua mensagem"></textarea>
-                        <button class="formcontato__botao">Enviar mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+  <!-- Sessão de Contato -->
+  <section class="formcontato">
+    <div id="contato" class="formcontato__contacto">
+        <div class="formcontato--esquerda"></div>
+        <div class="formcontato__text">
+            <h2 class="formcontato__title">Contato</h2>
+            <h3 class="formcontato__subtext">Quer entrar em contato comigo?</h3>
+            <h3 class="formcontato__subtext">Preencha o formulário ao lado e entrarei em contato o mais rápido possível. </h3>
+            <form id="form" class="formcontato__form" action="https://formsubmit.co/alexandres.dias@yahoo.com.br " method="POST">
+                <input id="nome" class="formcontato__input required" type="text" id="nome" placeholder="Nome" name="name" required >
+                <span class="span-required"> Por favor, preencha seu nome</span>
+        
+
+                <input id="email" class="formcontato__input required" name="name" type="email" id="email" placeholder="Email" name="e-mail" required>
+                <span class="span-required"> Digite um e-mail válido</span>
+
+                <input id="assunto" class="formcontato__input required" type="text" id="assunto" placeholder="Assunto" name="assunto" required>
+                <span class="span-required"> Campo obrigatório</span>
+
+                <textarea class="formcontato__textarea required" rows="5" cols="40" id="mensagem" name="message" placeholder="Sua mensagem" name="name" required></textarea>
+                <button class="formcontato__botao" type="submit" onclick="validar();">Enviar mensagem</button>
+
+                <input type="hidden" name="_subject" value="Novo Contato!">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </div>
+</section>
 
         <!-- Sessão de Footer/Rodapé-->
         <section class="footer">
