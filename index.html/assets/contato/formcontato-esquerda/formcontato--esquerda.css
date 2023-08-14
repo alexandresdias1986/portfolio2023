@@ -1,5 +1,5 @@
 .formcontato--esquerda{
-    image:src=("./
+    image:src=("./");
     height: 593px;
     width: 464px;
 }
@@ -7,5 +7,7 @@
 @media(min-width: 0px) and (max-width: 1024px){
     .formcontato--esquerda{
         display: none;
+        background-image: none;
+        flex-wrap: wrap;
     }
 }

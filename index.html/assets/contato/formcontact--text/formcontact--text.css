@@ -38,5 +38,7 @@
     }
     .formcontato__subtext{
         font-size: 14px;
+        flex-wrap: wrap;
+        background-image: none;
     }
 }
